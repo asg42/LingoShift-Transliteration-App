@@ -1,0 +1,4 @@
+interface FragmentActionListener {
+    fun onCloseFragment()
+
+}

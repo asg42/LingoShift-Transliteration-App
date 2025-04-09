@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/forgreen"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="LINGOSHIFT"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/darkroyalblue"
+        />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/AdViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etInputText"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5617214117437936/9927963819"/>
+
+
+    <ImageView
+        android:id="@+id/toolbar_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_logo_hdpi"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTextItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:background="@drawable/coffeebookbg"
+        app:layout_constraintBottom_toTopOf="@+id/etInputText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/etInputText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ENTER YOUR TEXT"
+        android:maxLines="5"
+        app:layout_constraintBottom_toTopOf="@+id/AdViewBottom"
+        app:layout_constraintEnd_toStartOf="@+id/ibFind"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnAddTextInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/goldyell"
+        android:text="LINGOSHIFT"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/AdViewBottom"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibFind"
+        android:layout_width="45dp"
+        android:layout_height="51dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/AdViewBottom"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddTextInput"
+        app:srcCompat="@drawable/find" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/royalblue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

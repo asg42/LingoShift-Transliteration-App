@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="forgreen">#00ff95</color>
+    <color name="royalblue">#00d0ff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="goldyell">#FFD600</color>
+    <color name="black">#292929</color>
+    <color name="darkroyalblue">#006496</color>
+</resources>
